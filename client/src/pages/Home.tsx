@@ -1,25 +1,37 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { useEffect, useRef, useState } from "react";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Benefits from "@/components/Benefits";
+import EducationServices from "@/components/EducationServices";
+import Portfolio from "@/components/Portfolio";
+import GeneralServices from "@/components/GeneralServices";
+import Process from "@/components/Process";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
+/*
+  DESIGN: Editorial Craft
+  - DM Serif Display for headings, DM Sans for body
+  - Navy #0f2b5b + Orange #f0945a
+  - Asymmetric layouts, paper textures, parallelogram motifs
+*/
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-cream">
+      <Header />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero />
+        <Benefits />
+        <EducationServices />
+        <Portfolio />
+        <GeneralServices />
+        <Process />
+        <CTA />
       </main>
+      <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }
