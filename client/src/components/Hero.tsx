@@ -52,18 +52,18 @@ export default function Hero() {
           <div className="lg:col-span-6 xl:col-span-5">
             <div className="inline-block bg-orange/20 border border-orange/30 px-4 py-1.5 rounded-sm mb-6">
               <span className="text-orange-light text-xs font-semibold tracking-widest uppercase">
-                Soluções Gráficas para Educação
+                Soluções Gráficas Profissionais
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
-              Materiais que{" "}
-              <span className="text-orange">transformam</span>{" "}
-              a experiência educacional
+              Impressos que{" "}
+              <span className="text-orange">fortalecem</span>{" "}
+              a sua marca
             </h1>
 
             <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8 max-w-lg font-light">
-              Apostilas, cadernos e agendas personalizados que agregam valor à sua marca e aumentam a fidelização dos seus alunos.
+              Serviços gráficos completos para empresas e instituições de ensino. Cartões, folders, embalagens, apostilas e materiais personalizados com qualidade premium.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

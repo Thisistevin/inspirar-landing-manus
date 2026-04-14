@@ -20,7 +20,7 @@ export default function Footer() {
               className="h-12 w-auto mb-4 rounded-sm"
             />
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Soluções gráficas que inspiram. Materiais de qualidade para educação e empresas.
+              Soluções gráficas que inspiram. Materiais de qualidade para empresas e educação.
             </p>
           </div>
 
@@ -30,9 +30,9 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               {[
                 { label: "Início", href: "#inicio" },
-                { label: "Educação", href: "#educacao" },
+                { label: "Serviços", href: "#empresas" },
                 { label: "Portfólio", href: "#portfolio" },
-                { label: "Empresas", href: "#empresas" },
+                { label: "Educação", href: "#educacao" },
                 { label: "Como Funciona", href: "#processo" },
               ].map((link) => (
                 <a

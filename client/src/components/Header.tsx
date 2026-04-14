@@ -11,9 +11,9 @@ const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqq
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
-  { label: "Educação", href: "#educacao" },
+  { label: "Serviços", href: "#empresas" },
   { label: "Portfólio", href: "#portfolio" },
-  { label: "Empresas", href: "#empresas" },
+  { label: "Educação", href: "#educacao" },
   { label: "Como Funciona", href: "#processo" },
 ];
 

@@ -52,13 +52,13 @@ export default function EducationServices() {
           {/* Left — Text */}
           <div className="lg:col-span-5">
             <span className="text-orange text-sm font-semibold tracking-widest uppercase">
-              Para Instituições de Ensino
+              Especialidade em Educação
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl text-white mt-3 mb-6 leading-tight">
               Materiais didáticos que fortalecem sua marca
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-10">
-              Produzimos materiais gráficos sob medida para escolas, cursinhos, pré-vestibulares e faculdades. Cada peça é pensada para agregar valor à experiência do aluno e diferenciar sua instituição no mercado.
+              Além dos serviços gráficos tradicionais, somos especialistas em materiais para escolas, cursinhos, pré-vestibulares e faculdades. Cada peça é pensada para agregar valor à experiência do aluno e diferenciar sua instituição no mercado.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

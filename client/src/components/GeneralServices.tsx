@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Printer, CreditCard, FileImage, Package, Megaphone, Stamp } from "lucide-react";
+import { Printer, CreditCard, FileImage, Package, Stamp } from "lucide-react";
 
 /*
   DESIGN: Editorial Craft — General Services
@@ -12,7 +12,6 @@ const GRAFICA_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8T
 const generalServices = [
   { icon: CreditCard, label: "Cartões de Visita" },
   { icon: FileImage, label: "Flyers e Panfletos" },
-  { icon: Megaphone, label: "Banners e Faixas" },
   { icon: Package, label: "Embalagens Personalizadas" },
   { icon: Stamp, label: "Papelaria Corporativa" },
   { icon: Printer, label: "Impressão Digital e Offset" },
@@ -62,7 +61,7 @@ export default function GeneralServices() {
           <div className="lg:col-span-5 order-1 lg:order-2">
             <div className="inline-block bg-navy/10 border border-navy/15 px-4 py-1.5 rounded-sm mb-6">
               <span className="text-navy text-xs font-semibold tracking-widest uppercase">
-                Para Empresas Locais
+                Nossos Serviços
               </span>
             </div>
 
@@ -70,7 +69,7 @@ export default function GeneralServices() {
               Soluções gráficas completas para o seu negócio
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Além do segmento educacional, atendemos empresas de todos os setores com serviços gráficos de alta qualidade. Cartões de visita, folders, banners, embalagens e muito mais para fortalecer a presença da sua marca.
+              Atendemos empresas de todos os setores com serviços gráficos de alta qualidade. Cartões de visita, folders, embalagens e muito mais para fortalecer a presença da sua marca no mercado.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
