@@ -7,7 +7,7 @@ import { Printer, CreditCard, FileImage, Package, Stamp } from "lucide-react";
   Warm-gray background, service cards, different CTA.
 */
 
-const GRAFICA_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/grafica-geral-CPmATRszzsKab7NqRqTK47.webp";
+const GRAFICA_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/inspirar-stationery-LfbTbHhGnXXX3K5RTSa2p7.webp";
 
 const generalServices = [
   { icon: CreditCard, label: "Cartões de Visita" },
