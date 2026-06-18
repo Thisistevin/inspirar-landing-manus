@@ -1,10 +1,8 @@
-import { useEffect, useRef, useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Benefits from "@/components/Benefits";
-import GeneralServices from "@/components/GeneralServices";
+import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
-import EducationServices from "@/components/EducationServices";
+import Quality from "@/components/Quality";
 import Process from "@/components/Process";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -14,8 +12,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
   DESIGN: Editorial Craft
   - DM Serif Display for headings, DM Sans for body
   - Navy #0f2b5b + Orange #f0945a
-  - Asymmetric layouts, paper textures, parallelogram motifs
-  - Gráfica tradicional como atividade principal (aparece primeiro)
+  - Foco: Materiais impressos de marketing e divulgação
 */
 
 export default function Home() {
@@ -24,10 +21,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Benefits />
-        <GeneralServices />
+        <Services />
         <Portfolio />
-        <EducationServices />
+        <Quality />
         <Process />
         <CTA />
       </main>

@@ -3,17 +3,18 @@ import { Menu, X } from "lucide-react";
 
 /*
   DESIGN: Editorial Craft — Header
-  Sticky nav, logo left, nav links right, CTA button accent orange.
-  On scroll: subtle backdrop blur + shadow.
+  Logo azul no header (fundo claro quando scrolled), logo branca quando transparente.
+  Sticky nav, CTA orange.
 */
 
-const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/logo-white-bg_99a45c1d.png";
+const LOGO_DARK = "/manus-storage/2_86db4475.webp"; // Logo azul (fundo branco)
+const LOGO_LIGHT = "/manus-storage/1_e7d4093f.webp"; // Logo branca (fundo escuro)
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
-  { label: "Serviços", href: "#empresas" },
+  { label: "Serviços", href: "#servicos" },
   { label: "Portfólio", href: "#portfolio" },
-  { label: "Educação", href: "#educacao" },
+  { label: "Qualidade", href: "#qualidade" },
   { label: "Como Funciona", href: "#processo" },
 ];
 
@@ -37,11 +38,11 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-2 shrink-0">
+        <a href="#inicio" className="flex items-center shrink-0">
           <img
-            src={LOGO_URL}
+            src={scrolled ? LOGO_DARK : LOGO_LIGHT}
             alt="Inspirar Soluções Gráficas"
-            className="h-9 md:h-11 w-auto"
+            className="h-8 md:h-10 w-auto transition-opacity duration-200"
           />
         </a>
 
@@ -73,7 +74,7 @@ export default function Header() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 text-navy"
+          className={`lg:hidden p-2 ${scrolled ? "text-navy" : "text-white"}`}
           aria-label="Menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}

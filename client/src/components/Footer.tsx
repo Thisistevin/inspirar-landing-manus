@@ -2,10 +2,10 @@ import { MapPin, Phone } from "lucide-react";
 
 /*
   DESIGN: Editorial Craft — Footer
-  Navy background, logo, contact info, social links, copyright.
+  Navy background, white logo, contact info, social links, copyright.
 */
 
-const LOGO_BLUE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/logo-blue-bg_4063adec.png";
+const LOGO_WHITE = "/manus-storage/1_e7d4093f.webp"; // Logo branca (fundo escuro)
 
 export default function Footer() {
   return (
@@ -15,12 +15,12 @@ export default function Footer() {
           {/* Logo + tagline */}
           <div>
             <img
-              src={LOGO_BLUE}
+              src={LOGO_WHITE}
               alt="Inspirar Soluções Gráficas"
-              className="h-12 w-auto mb-4 rounded-sm"
+              className="h-10 w-auto mb-4"
             />
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Soluções gráficas que inspiram. Materiais de qualidade para empresas e educação.
+              Materiais impressos de marketing e divulgação com qualidade premium para impulsionar o seu negócio.
             </p>
           </div>
 
@@ -30,9 +30,9 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               {[
                 { label: "Início", href: "#inicio" },
-                { label: "Serviços", href: "#empresas" },
+                { label: "Serviços", href: "#servicos" },
                 { label: "Portfólio", href: "#portfolio" },
-                { label: "Educação", href: "#educacao" },
+                { label: "Qualidade", href: "#qualidade" },
                 { label: "Como Funciona", href: "#processo" },
               ].map((link) => (
                 <a

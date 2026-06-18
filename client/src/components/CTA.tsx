@@ -23,10 +23,10 @@ export default function CTA() {
 
       <div className="container relative z-10 text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl text-white mb-6 max-w-3xl mx-auto leading-tight">
-          Pronto para transformar seus materiais?
+          Pronto para impulsionar sua divulgação?
         </h2>
         <p className="text-white/75 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Solicite um orçamento sem compromisso e descubra como podemos agregar valor à sua instituição ou empresa.
+          Solicite um orçamento sem compromisso e descubra como materiais impressos de qualidade podem gerar mais resultados para o seu negócio.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

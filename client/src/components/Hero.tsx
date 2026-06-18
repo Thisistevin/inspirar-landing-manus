@@ -3,13 +3,11 @@ import { ArrowRight } from "lucide-react";
 
 /*
   DESIGN: Editorial Craft — Hero
-  Full-width hero with dark background image, white text, asymmetric layout.
-  Left: headline + CTA. Right: overlapping product images.
+  Full-width hero with dark background, white text, asymmetric layout.
+  Focus: materiais impressos de marketing e divulgação.
 */
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/hero-bg-JjwyRG9uZ3QETLiyFcKEmq.webp";
-const BANNER_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/banner_df46a6fc.png";
-const ABBA_KIDS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/abbakidsg5_b4fa0064.png";
+const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/hero-marketing-THjVZayzhrYCks5bVfMNHo.webp";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -43,27 +41,27 @@ export default function Hero() {
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a3d]/95 via-[#0a1a3d]/80 to-[#0a1a3d]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a3d]/92 via-[#0a1a3d]/75 to-[#0a1a3d]/30" />
       </div>
 
       <div className="container relative z-10 py-32 md:py-40">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left — Text */}
-          <div className="lg:col-span-6 xl:col-span-5">
+          <div className="lg:col-span-7 xl:col-span-6">
             <div className="inline-block bg-orange/20 border border-orange/30 px-4 py-1.5 rounded-sm mb-6">
               <span className="text-orange-light text-xs font-semibold tracking-widest uppercase">
-                Soluções Gráficas Profissionais
+                Materiais Impressos de Marketing
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
-              Impressos que{" "}
-              <span className="text-orange">fortalecem</span>{" "}
-              a sua marca
+              Seus materiais de{" "}
+              <span className="text-orange">divulgação</span>{" "}
+              com qualidade profissional
             </h1>
 
-            <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8 max-w-lg font-light">
-              Serviços gráficos completos para empresas e instituições de ensino. Cartões, folders, embalagens, apostilas e materiais personalizados com qualidade premium.
+            <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8 max-w-xl font-light">
+              Panfletos, folders, flyers, cartões de visita, catálogos e manuais que destacam sua marca e geram resultados reais para o seu negócio.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -73,7 +71,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-orange hover:bg-orange-dark text-white font-semibold px-8 py-4 rounded-sm transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-base"
               >
-                Fale Conosco
+                Solicitar Orçamento
                 <ArrowRight size={18} />
               </a>
               <a
@@ -82,31 +80,6 @@ export default function Hero() {
               >
                 Ver Portfólio
               </a>
-            </div>
-          </div>
-
-          {/* Right — Product Images */}
-          <div className="lg:col-span-6 xl:col-span-7 hidden lg:block">
-            <div className="relative">
-              {/* Banner image — apostilas collection */}
-              <div className="relative z-10 transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
-                <img
-                  src={BANNER_IMG}
-                  alt="Coleção de apostilas personalizadas"
-                  className="w-full rounded-sm shadow-2xl"
-                />
-              </div>
-              {/* Floating smaller image */}
-              <div className="absolute -bottom-12 -left-8 z-20 w-48 transform rotate-[3deg] hover:rotate-0 transition-transform duration-500">
-                <img
-                  src={ABBA_KIDS}
-                  alt="Apostila infantil personalizada"
-                  className="w-full rounded-sm shadow-2xl border-4 border-white/20"
-                />
-              </div>
-              {/* Decorative parallelogram */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-orange/20 transform skew-x-12 -skew-y-3 rounded-sm" />
-              <div className="absolute -bottom-4 right-12 w-16 h-16 bg-orange/10 transform skew-x-12 -skew-y-3 rounded-sm" />
             </div>
           </div>
         </div>

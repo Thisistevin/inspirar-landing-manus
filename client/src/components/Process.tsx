@@ -12,25 +12,25 @@ const steps = [
     icon: MessageCircle,
     number: "01",
     title: "Contato",
-    description: "Entre em contato pelo WhatsApp e conte-nos sobre o seu projeto e necessidades.",
+    description: "Entre em contato pelo WhatsApp e conte-nos sobre o material de divulgação que precisa.",
   },
   {
     icon: PenTool,
     number: "02",
     title: "Criação",
-    description: "Nossa equipe desenvolve o design personalizado com a identidade da sua marca.",
+    description: "Nossa equipe desenvolve o design ou adapta seu arquivo para impressão perfeita.",
   },
   {
     icon: Printer,
     number: "03",
     title: "Produção",
-    description: "Após aprovação, iniciamos a produção com os mais altos padrões de qualidade.",
+    description: "Após aprovação, iniciamos a produção com equipamentos de alta qualidade.",
   },
   {
     icon: Truck,
     number: "04",
     title: "Entrega",
-    description: "Materiais prontos entregues no prazo combinado, diretamente na sua instituição.",
+    description: "Materiais prontos entregues no prazo combinado, prontos para uso imediato.",
   },
 ];
 
