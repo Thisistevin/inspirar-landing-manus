@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { trackConversion } from "@/lib/gtag";
 
 /*
   DESIGN: Editorial Craft — CTA
@@ -34,6 +35,7 @@ export default function CTA() {
             href="https://wa.link/35hq8u"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackConversion}
             className="inline-flex items-center justify-center gap-2 bg-orange hover:bg-orange-dark text-white font-semibold px-10 py-4 rounded-sm transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-lg"
           >
             Falar pelo WhatsApp

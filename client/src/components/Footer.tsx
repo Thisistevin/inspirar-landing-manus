@@ -1,4 +1,5 @@
 import { MapPin, Phone } from "lucide-react";
+import { trackConversion } from "@/lib/gtag";
 
 /*
   DESIGN: Editorial Craft — Footer
@@ -61,6 +62,7 @@ export default function Footer() {
                 href="https://wa.link/35hq8u"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackConversion}
                 className="flex items-center gap-3 text-white/60 hover:text-orange text-sm transition-colors duration-200"
               >
                 <Phone size={18} className="text-orange shrink-0" />

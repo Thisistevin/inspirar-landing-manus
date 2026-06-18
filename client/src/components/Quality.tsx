@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { trackConversion } from "@/lib/gtag";
 
 /*
   DESIGN: Editorial Craft — Quality
@@ -73,6 +74,7 @@ export default function Quality() {
               href="https://wa.link/35hq8u"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackConversion}
               className="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark text-white font-semibold px-8 py-4 rounded-sm transition-all duration-200 shadow-lg hover:shadow-xl mt-10 text-base"
             >
               Solicitar Orçamento

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { trackConversion } from "@/lib/gtag";
 
 /*
   DESIGN: Editorial Craft — Header
@@ -65,6 +66,7 @@ export default function Header() {
             href="https://wa.link/35hq8u"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackConversion}
             className="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark text-white font-semibold text-sm px-6 py-2.5 rounded-sm transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
           >
             Solicitar Orçamento
@@ -99,6 +101,7 @@ export default function Header() {
               href="https://wa.link/35hq8u"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackConversion}
               className="inline-flex items-center justify-center gap-2 bg-orange hover:bg-orange-dark text-white font-semibold text-sm px-6 py-3 rounded-sm transition-all duration-200 mt-2"
             >
               Solicitar Orçamento

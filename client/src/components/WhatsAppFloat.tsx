@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
+import { trackConversion } from "@/lib/gtag";
 
 /*
   DESIGN: Editorial Craft — WhatsApp Float
@@ -23,6 +24,7 @@ export default function WhatsAppFloat() {
       href="https://wa.link/35hq8u"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={trackConversion}
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 animate-in fade-in zoom-in-75 hover:scale-110"
       aria-label="Fale conosco pelo WhatsApp"
     >

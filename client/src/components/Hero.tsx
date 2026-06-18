@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { trackConversion } from "@/lib/gtag";
 
 /*
   DESIGN: Editorial Craft — Hero
@@ -69,6 +70,7 @@ export default function Hero() {
                 href="https://wa.link/35hq8u"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackConversion}
                 className="inline-flex items-center justify-center gap-2 bg-orange hover:bg-orange-dark text-white font-semibold px-8 py-4 rounded-sm transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-base"
               >
                 Solicitar Orçamento
