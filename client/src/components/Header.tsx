@@ -5,17 +5,17 @@ import { trackConversion } from "@/lib/gtag";
 /*
   DESIGN: Editorial Craft — Header
   Logo azul no header (fundo claro quando scrolled), logo branca quando transparente.
-  Sticky nav, CTA orange.
+  Sticky nav, CTA orange. Education-focused.
 */
 
-const LOGO_DARK = "/manus-storage/2_86db4475.webp"; // Logo azul (fundo branco)
-const LOGO_LIGHT = "/manus-storage/1_e7d4093f.webp"; // Logo branca (fundo escuro)
+const LOGO_DARK = "/manus-storage/2_86db4475.webp";
+const LOGO_LIGHT = "/manus-storage/1_e7d4093f.webp";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
-  { label: "Serviços", href: "#servicos" },
+  { label: "Benefícios", href: "#beneficios" },
+  { label: "Soluções", href: "#solucoes" },
   { label: "Portfólio", href: "#portfolio" },
-  { label: "Qualidade", href: "#qualidade" },
   { label: "Como Funciona", href: "#processo" },
 ];
 
@@ -38,7 +38,6 @@ export default function Header() {
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
         <a href="#inicio" className="flex items-center shrink-0">
           <img
             src={scrolled ? LOGO_DARK : LOGO_LIGHT}
@@ -47,7 +46,6 @@ export default function Header() {
           />
         </a>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -69,11 +67,10 @@ export default function Header() {
             onClick={trackConversion}
             className="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark text-white font-semibold text-sm px-6 py-2.5 rounded-sm transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
           >
-            Solicitar Orçamento
+            Falar com Especialista
           </a>
         </nav>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className={`lg:hidden p-2 ${scrolled ? "text-navy" : "text-white"}`}
@@ -83,7 +80,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {mobileOpen && (
         <div className="lg:hidden bg-white/98 backdrop-blur-md border-t border-border animate-in fade-in slide-in-from-top-2 duration-200">
           <nav className="container py-6 flex flex-col gap-4">
@@ -104,7 +100,7 @@ export default function Header() {
               onClick={trackConversion}
               className="inline-flex items-center justify-center gap-2 bg-orange hover:bg-orange-dark text-white font-semibold text-sm px-6 py-3 rounded-sm transition-all duration-200 mt-2"
             >
-              Solicitar Orçamento
+              Falar com Especialista
             </a>
           </nav>
         </div>

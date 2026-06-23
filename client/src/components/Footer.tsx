@@ -4,9 +4,10 @@ import { trackConversion } from "@/lib/gtag";
 /*
   DESIGN: Editorial Craft — Footer
   Navy background, white logo, contact info, social links, copyright.
+  Education-focused tagline.
 */
 
-const LOGO_WHITE = "/manus-storage/1_e7d4093f.webp"; // Logo branca (fundo escuro)
+const LOGO_WHITE = "/manus-storage/1_e7d4093f.webp";
 
 export default function Footer() {
   return (
@@ -21,7 +22,7 @@ export default function Footer() {
               className="h-10 w-auto mb-4"
             />
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Materiais impressos de marketing e divulgação com qualidade premium para impulsionar o seu negócio.
+              Materiais didáticos personalizados que agregam valor à sua instituição de ensino e melhoram a experiência dos alunos.
             </p>
           </div>
 
@@ -31,9 +32,9 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               {[
                 { label: "Início", href: "#inicio" },
-                { label: "Serviços", href: "#servicos" },
+                { label: "Benefícios", href: "#beneficios" },
+                { label: "Soluções", href: "#solucoes" },
                 { label: "Portfólio", href: "#portfolio" },
-                { label: "Qualidade", href: "#qualidade" },
                 { label: "Como Funciona", href: "#processo" },
               ].map((link) => (
                 <a

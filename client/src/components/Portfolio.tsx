@@ -3,10 +3,26 @@ import { Instagram } from "lucide-react";
 
 /*
   DESIGN: Editorial Craft — Portfolio
-  Showcase of marketing materials produced for various businesses.
+  Showcase of educational materials produced for schools and courses.
 */
 
-const PORTFOLIO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/portfolio-spread-h63FLstn2GzJdQJgrZRt3S.webp";
+const portfolioItems = [
+  {
+    src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/hero-educacao-RxKc8fRYLppzJY3AboD2S5.webp",
+    alt: "Cadernos e apostilas personalizados para escolas",
+    label: "Cadernos Personalizados",
+  },
+  {
+    src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/apostilas-showcase-h8G5wtT7TghXYpeMEfjwFv.webp",
+    alt: "Apostilas didáticas com diagramação profissional",
+    label: "Apostilas Didáticas",
+  },
+  {
+    src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/agendas-cadernos-bMSWgXmehnbWsHzoENZsYt.webp",
+    alt: "Agendas escolares com identidade visual personalizada",
+    label: "Agendas Escolares",
+  },
+];
 
 export default function Portfolio() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -17,44 +33,51 @@ export default function Portfolio() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add("opacity-100");
-          el.classList.remove("opacity-0");
+          el.style.opacity = "1";
+          el.style.transform = "translateY(0)";
+          observer.disconnect();
         }
       },
       { threshold: 0.1 }
     );
+    el.style.opacity = "0";
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "opacity 0.7s ease, transform 0.7s ease";
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section
-      id="portfolio"
-      ref={sectionRef}
-      className="py-24 md:py-32 bg-warm-gray transition-opacity duration-700 opacity-0"
-    >
+    <section id="portfolio" ref={sectionRef} className="py-20 md:py-28 bg-white">
       <div className="container">
-        {/* Section header */}
-        <div className="text-center mb-12">
-          <span className="text-orange text-sm font-semibold tracking-widest uppercase">
-            Nosso Trabalho
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-orange text-sm font-semibold uppercase tracking-widest">
+            Portfólio
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-navy mt-3 mb-4 leading-tight">
-            Portfólio de Projetos
+          <h2 className="text-3xl md:text-4xl text-navy-dark mt-3 leading-tight">
+            Materiais que já transformaram instituições de ensino
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Conheça alguns dos materiais de marketing e divulgação que produzimos para empresas de diversos segmentos.
+          <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
+            Conheça alguns dos materiais didáticos que produzimos para escolas, cursinhos e faculdades.
           </p>
         </div>
 
-        {/* Portfolio image */}
-        <div className="relative max-w-5xl mx-auto">
-          <img
-            src={PORTFOLIO_IMG}
-            alt="Portfólio de materiais impressos - panfletos, folders, cartões de visita, catálogos e manuais para diversos segmentos"
-            className="w-full rounded-sm shadow-2xl"
-          />
-          <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-navy/10 rounded-sm -z-10" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {portfolioItems.map((item, i) => (
+            <div
+              key={i}
+              className="group relative rounded-sm overflow-hidden shadow-lg aspect-[4/3]"
+            >
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <span className="text-white font-semibold text-lg">{item.label}</span>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Instagram link */}

@@ -3,34 +3,34 @@ import { MessageCircle, PenTool, Printer, Truck } from "lucide-react";
 
 /*
   DESIGN: Editorial Craft — Process
-  Off-white background, horizontal timeline with 4 steps.
-  Numbered steps with connecting lines.
+  How it works: 4 steps to get personalized educational materials.
+  Dark navy background for contrast.
 */
 
 const steps = [
   {
     icon: MessageCircle,
     number: "01",
-    title: "Contato",
-    description: "Entre em contato pelo WhatsApp e conte-nos sobre o material de divulgação que precisa.",
+    title: "Briefing",
+    description: "Entendemos as necessidades da sua instituição: quantidade de alunos, tipo de material, identidade visual e prazos.",
   },
   {
     icon: PenTool,
     number: "02",
-    title: "Criação",
-    description: "Nossa equipe desenvolve o design ou adapta seu arquivo para impressão perfeita.",
+    title: "Criação e Aprovação",
+    description: "Nossa equipe desenvolve o design e diagramação. Você aprova cada detalhe antes da produção.",
   },
   {
     icon: Printer,
     number: "03",
     title: "Produção",
-    description: "Após aprovação, iniciamos a produção com equipamentos de alta qualidade.",
+    description: "Imprimimos seus materiais com equipamentos de última geração, garantindo qualidade e fidelidade de cores.",
   },
   {
     icon: Truck,
     number: "04",
     title: "Entrega",
-    description: "Materiais prontos entregues no prazo combinado, prontos para uso imediato.",
+    description: "Entregamos no prazo combinado, diretamente na sua instituição, prontos para uso pelos alunos.",
   },
 ];
 
@@ -58,17 +58,17 @@ export default function Process() {
   }, []);
 
   return (
-    <section id="processo" ref={sectionRef} className="py-24 md:py-32 bg-cream">
+    <section id="processo" ref={sectionRef} className="py-24 md:py-32" style={{ backgroundColor: "#1a2744" }}>
       <div className="container">
         <div className="text-center mb-16">
           <span className="text-orange text-sm font-semibold tracking-widest uppercase">
             Simples e Rápido
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-navy mt-3 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-white mt-3 mb-4">
             Como funciona
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Do primeiro contato à entrega, cuidamos de cada etapa para garantir a melhor experiência.
+          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+            Do briefing à entrega, cuidamos de cada etapa para que sua instituição tenha materiais didáticos de excelência sem complicação.
           </p>
         </div>
 
@@ -84,16 +84,16 @@ export default function Process() {
                 className="process-step opacity-0 translate-y-8 transition-all duration-500 text-center relative"
               >
                 {/* Number circle */}
-                <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white border-2 border-navy/10 rounded-full mb-6 shadow-md z-10">
+                <div className="relative inline-flex items-center justify-center w-20 h-20 bg-white/5 border-2 border-white/20 rounded-full mb-6 shadow-md z-10">
                   <span className="text-orange font-serif text-2xl">{step.number}</span>
                 </div>
 
-                <div className="w-12 h-12 bg-navy/5 flex items-center justify-center mx-auto mb-4 transform skew-x-[-3deg]">
-                  <Icon size={22} className="text-navy" />
+                <div className="w-12 h-12 bg-white/5 flex items-center justify-center mx-auto mb-4 transform skew-x-[-3deg]">
+                  <Icon size={22} className="text-white/70" />
                 </div>
 
-                <h3 className="text-xl text-navy mb-2 font-serif">{step.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
+                <h3 className="text-xl text-white mb-2 font-serif">{step.title}</h3>
+                <p className="text-white/60 text-sm leading-relaxed max-w-xs mx-auto">
                   {step.description}
                 </p>
               </div>

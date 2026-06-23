@@ -3,11 +3,11 @@ import { trackConversion } from "@/lib/gtag";
 
 /*
   DESIGN: Editorial Craft — CTA
-  Dark background with abstract pattern, strong call-to-action.
+  Education-themed background with strong call-to-action.
   White text, orange CTA button.
 */
 
-const CTA_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/cta-bg-H85MkTLmRRqotHYnSbZxqh.webp";
+const CTA_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663053606742/8TFqqCwDJQL62RC4A65WNH/cta-educacao-bAsgPsYccDt7cthkZQoU72.webp";
 
 export default function CTA() {
   return (
@@ -19,15 +19,15 @@ export default function CTA() {
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-navy/85" />
+        <div className="absolute inset-0 bg-navy/70" />
       </div>
 
       <div className="container relative z-10 text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl text-white mb-6 max-w-3xl mx-auto leading-tight">
-          Pronto para impulsionar sua divulgação?
+          Pronto para elevar a experiência dos seus alunos?
         </h2>
         <p className="text-white/75 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Solicite um orçamento sem compromisso e descubra como materiais impressos de qualidade podem gerar mais resultados para o seu negócio.
+          Solicite um orçamento sem compromisso e descubra como materiais didáticos personalizados podem aumentar a retenção e o valor percebido da sua instituição.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,7 +38,7 @@ export default function CTA() {
             onClick={trackConversion}
             className="inline-flex items-center justify-center gap-2 bg-orange hover:bg-orange-dark text-white font-semibold px-10 py-4 rounded-sm transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-lg"
           >
-            Falar pelo WhatsApp
+            Falar com Especialista
             <ArrowRight size={20} />
           </a>
           <a
